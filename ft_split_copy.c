@@ -1,4 +1,4 @@
-#include "ft_lib.h"
+#include "libft.h"
 
 char **create_array_c(char const *s, char c, int* len)
 {

@@ -1,4 +1,4 @@
-#include "ft_lib.h"
+#include "libft.h"
 
 int digits(int n)
 {
@@ -35,7 +35,5 @@ char *ft_itoa(int n)
         str[len--] = n%10 + '0';
         n /= 10;
     }
-
-    
     return str;
 }
