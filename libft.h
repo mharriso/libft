@@ -9,8 +9,8 @@
 size_t	ft_strlen(const char *s);
 void *ft_calloc( size_t number, size_t size );
 void ft_bzero(void * s , size_t  n );
-char *ft_strchr (const char *str, int ch);
-char *strrchr (const char *str, int ch);
+char *ft_strchr (const char *str, int c);
+char *strrchr (const char *str, int c);
 void	*ft_memset(void *b, int c, size_t len);
 void *ft_memcpy(void *dest, const void *source, size_t count);
 void *ft_memccpy(void *dest, const void *source, int ch, size_t count);
