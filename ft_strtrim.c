@@ -6,9 +6,9 @@ char *ft_strtrim(char const *s1, char const *set)
     int start, end, i;
     start = 0;
     end = ft_strlen(s1) - 1;
-    while(strchr(set, s1[start]))
+    while(ft_strchr(set, s1[start]))
         start++;
-    while(strchr(set, s1[end]))
+    while(ft_strchr(set, s1[end]))
         end--;
     res = malloc((end - start + 2) * sizeof(char));
     if(!res) return NULL;
