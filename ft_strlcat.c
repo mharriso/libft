@@ -7,14 +7,9 @@ size_t ft_strlcat (char *dst, const char *src, size_t size)
 
     i = ft_strlen(dst);
     j = 0;
-    //printf("\n%zu %zu\n", i, size);
     while(i < size - 1)
-    {
-        dst[i] = src[j];
-	j++;
-        i++;
-    }
+        dst[i++] = src[j++];
+	
     dst[i] = '\0';
-    //printf("\n%zu", i+size);
     return i + size;
 }   
