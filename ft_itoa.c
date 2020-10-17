@@ -5,7 +5,7 @@ int digits(int n)
     int i;
 
     i = 1;
-    while(n/=10)
+    while(n /= 10)
         i++;
     return i;
 }
@@ -13,11 +13,12 @@ int digits(int n)
 char *ft_itoa(int n)
 { 
     char *str;
-    int minus = 0;
+    int minus;
     int len;
 
     if(n == 0)
         return "0";
+    minus = 0;
     if(n < 0)
     {
         n *= -1;
@@ -35,5 +36,5 @@ char *ft_itoa(int n)
         str[len--] = n%10 + '0';
         n /= 10;
     }
-    return str;
+    return (str);
 }

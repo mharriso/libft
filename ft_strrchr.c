@@ -9,5 +9,5 @@ char *ft_strrchr (const char *str, int c)
   while(len--)
     if(str[len] == c)
       return ((char *)str + len);
-  return 0;
+  return (0);
 }
