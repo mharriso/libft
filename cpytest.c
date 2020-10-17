@@ -15,18 +15,18 @@ int main(void)
    printf("буфер перед копированием: \"%s\"\n", buf1);
 
 
-   sz1 = strlcpy(buf1, str, sizeof(buf1));    
+   sz1 = ft_strlcpy(buf1, str, 11);    
    if (sz1 >= sizeof(buf1))      
       printf("обнаружено усечение строки с %zu до %lu символов!\n", sz1, sizeof(buf1)-1);
-   printf("буфер после копирования:  \"%s\"\n\n", buf1);
+   printf("буфер после копирования:  \"%s\"\nsize = %zu\n", buf1, sz1);
 
 
 
    printf("буфер перед копированием: \"%s\"\n", buf2);
-   sz2 = ft_strlcpy(buf2, str, sizeof(buf2));    
+   sz2 = ft_strlcpy(buf2, str, 11);    
    if (sz2 >= sizeof(buf2))      
       printf("обнаружено усечение строки с %zu до %lu символов!\n", sz2, sizeof(buf2)-1);
-   printf("буфер после копирования:  \"%s\"\n", buf2);
+   printf("буфер после копирования:  \"%s\"\nsize = %zu\n", buf2, sz2);
 
    return 0;
 }

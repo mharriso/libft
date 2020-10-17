@@ -3,6 +3,9 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
+//delete
+#include <stdint.h>
+#include <stdio.h>
 
 //libc funcs
 
@@ -14,6 +17,7 @@ char *ft_strrchr (const char *str, int c);
 size_t ft_strlcpy (char *dst, const char *src, size_t size);
 size_t ft_strlcat (char *dst, const char *src, size_t size);
 char * ft_strnstr (const char *big, const char *little, size_t len);
+int ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memset(void *b, int c, size_t len);
 void *ft_memcpy(void *dest, const void *source, size_t count);
 void *ft_memccpy(void *dest, const void *source, int ch, size_t count);
