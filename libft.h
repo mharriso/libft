@@ -6,7 +6,6 @@
 //delete
 #include <stdint.h>
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 
 //libc funcs
@@ -24,6 +23,7 @@ void	*ft_memset(void *b, int c, size_t len);
 void *ft_memcpy(void *dest, const void *source, size_t count);
 void *ft_memccpy(void *dest, const void *source, int c, size_t count);
 int ft_memcmp(const void *buf1, const void *buf2, size_t count);
+void *ft_memmove (void *destination, const void *source, size_t n);
 int         ft_atoi(char *str);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);
@@ -48,6 +48,12 @@ void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 
 //bonus funcs
+
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int ft_isspace(int c);
 

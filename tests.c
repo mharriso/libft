@@ -2,6 +2,8 @@
 
 void atoi_test()
 {
+    printf("%21d | %21d\n", atoi("6442450944"), ft_atoi("6442450944"));
+
     printf("%21d | %21d\n", atoi(""), ft_atoi(""));
     printf("%21d | %21d\n", atoi("+"), ft_atoi("+"));
     printf("%21d | %21d\n", atoi("-"), ft_atoi("-"));
@@ -10,8 +12,8 @@ void atoi_test()
     //printf("%21d | %21d\n", atoi(NULL), ft_atoi(NULL)); // segmetation fault
     printf("%21d | %21d\n", atoi("+999"), ft_atoi("+999"));
     printf("%21d | %21d\n", atoi("-999"), ft_atoi("-999"));
-    printf("%21d | %21d\n", atoi("1234567890"), ft_atoi("1234567890"));
-    printf("%21d | %21d\n", atoi("     999aaaa"), ft_atoi("      999aaaa"));
+    printf("%21d | %21d\n", atoi("2147483647"), ft_atoi("2147483647"));  //INT_MAX
+    printf("%21d | %21d\n", atoi("-2147483648"), ft_atoi("-2147483648")); //INT_MIN
     printf("%21d | %21d\n", atoi("12345678901"), ft_atoi("12345678901"));
     printf("%21d | %21d\n", atoi("-12345678901"), ft_atoi("-12345678901"));
 }
@@ -59,9 +61,9 @@ void cmp_test()
 }
 int main()
 {
-    //atoi_test();
+    atoi_test();
     //strlcpy_test();
     //strdup_test();
-    cmp_test();
+    //cmp_test();
     return 0;
 }
