@@ -45,12 +45,6 @@ void strlcpy_test()
    printf("буфер после копирования:  \"%s\"\nsize = %zu\n", buf2, sz2);
 }
 
-void strdup_test()
-{
-   printf("%s$\n", strdup(""));
-   printf("%s$\n", strdup("string duplicate"));
-   printf("%s$\n", strdup("8888888888888888888888888888888888888888888888888888888888888"));
-}
 void cmp_test()
 {
    printf("%5d%5d\n", memcmp("123456", "123457", 3), ft_memcmp("123456", "123457", 3));
@@ -83,6 +77,18 @@ void memchr_test()
    printf("%s\n", ft_memchr(s, 'e', 1));
 
 }
+void strdup_test()
+{
+   char *str = "Dublicate Me !!!";
+   char *dup1;
+   dup1 = strdup(str);
+   char *dup2;
+   dup2 = ft_strdup(str);
+   printf("%s$\n%s$\n", dup1, dup2);
+   printf("%s$\n", ft_strdup(""));
+   printf("%s$\n", ft_strdup("string duplicate"));
+   printf("%s$\n", ft_strdup(NULL));
+}
 int main()
 {
     //atoi_test();
@@ -90,6 +96,7 @@ int main()
     //strdup_test();
     //cmp_test();
     //mem_test();
-    memchr_test();
+    //memchr_test();
+    strdup_test();
     return 0;
 }
