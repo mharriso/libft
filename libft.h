@@ -57,6 +57,7 @@ typedef struct		s_list
 	struct s_list	*next;
 }					t_list;
 
+t_list *ft_lstnew(void *content);
 int ft_isspace(int c);
 
 #endif
