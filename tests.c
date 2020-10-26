@@ -12,10 +12,13 @@ void atoi_test()
     //printf("%21d | %21d\n", atoi(NULL), ft_atoi(NULL)); // segmetation fault
     printf("%21d | %21d\n", atoi("+999"), ft_atoi("+999"));
     printf("%21d | %21d\n", atoi("-999"), ft_atoi("-999"));
-    printf("%21d | %21d\n", atoi("2147483647"), ft_atoi("2147483647"));  //INT_MAX
-    printf("%21d | %21d\n", atoi("-2147483648"), ft_atoi("-2147483648")); //INT_MIN
     printf("%21d | %21d\n", atoi("12345678901"), ft_atoi("12345678901"));
     printf("%21d | %21d\n", atoi("-12345678901"), ft_atoi("-12345678901"));
+    printf("%21d | %21d\n", atoi("2147483647"), ft_atoi("2147483647"));  //INT_MAX
+    printf("%21d | %21d\n", atoi("-2147483648"), ft_atoi("-2147483648")); //INT_MIN
+     printf("%21d | %21d\n", atoi("2147483648"), ft_atoi("2147483648"));  //INT_MAX + 1
+    printf("%21d | %21d\n", atoi("-2147483649"), ft_atoi("-2147483649")); //INT_MIN - 1
+    
 }
 
 void strlcpy_test()
@@ -59,11 +62,27 @@ void cmp_test()
    printf("%5d%5d\n", strncmp("123 Y", "123 B", 6), ft_strncmp("123 Y", "123 B", 6));
    printf("%5d%5d\n", strncmp("123 a", "123 z", 6), ft_strncmp("123 a", "123 z", 6));
 }
+void mem_test()
+{
+   // Исходный массив данных
+   unsigned char src[11]="1234567890";
+
+   // Вывод массива src на консоль
+   printf ("src old: %s\n",src);
+
+   // Копируем 3 байт
+  ft_memcpy (&src[1], &src[7], 3); //memmove 1890567890
+
+   // Вывод массива src на консоль
+   printf ("src new: %s\n",src);
+}
+
 int main()
 {
     atoi_test();
     //strlcpy_test();
     //strdup_test();
     //cmp_test();
+    //mem_test();
     return 0;
 }

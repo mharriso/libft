@@ -23,7 +23,7 @@ void	*ft_memset(void *b, int c, size_t len);
 void *ft_memcpy(void *dest, const void *source, size_t count);
 void *ft_memccpy(void *dest, const void *source, int c, size_t count);
 int ft_memcmp(const void *buf1, const void *buf2, size_t count);
-void *ft_memmove (void *destination, const void *source, size_t n);
+void *ft_memmove (void *dst, const void *src, size_t n);
 int         ft_atoi(char *str);
 int		ft_isalpha(int c);
 int		ft_isascii(int c);

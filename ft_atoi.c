@@ -5,15 +5,16 @@ int         ft_atoi(char *str)
 	int		number;
 	int		sign;
 
+	sign = 1;
 	while (ft_isspace(*str))
 		str++;
-	if (*str == '-' || *str == '+')
+	if (*str == '-')
 	{
-		sign = (*str == '-') ? -1 : 1;
+		sign =  -1;
 		str++;
 	}
-	else
-		sign = 1;
+	if(*str == '+')
+		str++;
 	number = 0;
 	while (ft_isdigit(*str))
 	{
