@@ -76,13 +76,20 @@ void mem_test()
    // Вывод массива src на консоль
    printf ("src new: %s\n",src);
 }
+void memchr_test()
+{
+   char s[20] = "Hello World!!!";
+   printf("%s\n", memchr(s, 'e', 1));
+   printf("%s\n", ft_memchr(s, 'e', 1));
 
+}
 int main()
 {
-    atoi_test();
+    //atoi_test();
     //strlcpy_test();
     //strdup_test();
     //cmp_test();
     //mem_test();
+    memchr_test();
     return 0;
 }
