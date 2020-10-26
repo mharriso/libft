@@ -17,7 +17,7 @@ char *ft_itoa(int n)
     int len;
 
     if(n == 0)
-        return ft_strdup("0");
+        return (ft_strdup("0"));
     minus = 0;
     if(n < 0)
     {
