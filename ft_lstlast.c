@@ -6,13 +6,13 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 15:45:08 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 15:45:10 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/28 20:25:04 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
     if(!lst)
         return NULL;
