@@ -1,40 +1,51 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/28 22:15:29 by mharriso          #+#    #+#             */
+/*   Updated: 2020/10/28 22:30:32 by mharriso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	digits(int n)
+int				digits(int n)
 {
-	int i;
+	int		i;
 
 	i = 1;
-	while(n /= 10)
+	while (n /= 10)
 		i++;
-	return i;
+	return (i);
 }
 
-char *ft_itoa(int n)
+char			*ft_itoa(int n)
 {
-    char *str;
-    int minus;
-    int len;
+	char	*str;
+	int		minus;
+	int		len;
 
-    if(n == 0)
-        return (ft_strdup("0"));
-    minus = 0;
-    if(n < 0)
-    {
-        n *= -1;
-        minus = 1;
-    }
-    len = digits(n) + minus;
-    str = malloc((len + 1) * sizeof(char));
-    if(minus)
-        str[0] = '-';
-
-    str[len] = '\0';
-    len--;
-    while(n)
-    {
-        str[len--] = n%10 + '0';
-        n /= 10;
-    }
-    return (str);
+	if (n == 0)
+		return (ft_strdup("0"));
+	minus = 0;
+	if (n < 0)
+	{
+		n *= -1;
+		minus = 1;
+	}
+	len = digits(n) + minus;
+	str = malloc((len + 1) * sizeof(char));
+	if (minus)
+		str[0] = '-';
+	str[len] = '\0';
+	len--;
+	while (n)
+	{
+		str[len--] = n % 10 + '0';
+		n /= 10;
+	}
+	return (str);
 }

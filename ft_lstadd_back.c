@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:00:23 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 20:20:53 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/28 22:30:56 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstadd_back(t_list **alst, t_list *new)
 {
-    *alst = ft_lstlast(*alst);
-    *alst->next = new;
+	*alst = ft_lstlast(*alst);
+	*alst->next = new;
 }
