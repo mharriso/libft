@@ -6,18 +6,18 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:20:35 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 18:01:19 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/28 20:07:51 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void * ft_calloc(size_t number, size_t size)
+void		*ft_calloc(size_t number, size_t size)
 {
-    void *s;
+	void *s;
 
-    if (!(s = malloc(number * size)))
-        return (NULL);
-    ft_bzero(s, number * size);
-    return (s);
+	if (!(s = malloc(number * size)))
+		return (NULL);
+	ft_bzero(s, number * size);
+	return (s);
 }

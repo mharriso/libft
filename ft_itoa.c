@@ -1,17 +1,17 @@
 #include "libft.h"
 
-int digits(int n)
+int	digits(int n)
 {
-    int i;
+	int i;
 
-    i = 1;
-    while(n /= 10)
-        i++;
-    return i;
+	i = 1;
+	while(n /= 10)
+		i++;
+	return i;
 }
 
 char *ft_itoa(int n)
-{ 
+{
     char *str;
     int minus;
     int len;
