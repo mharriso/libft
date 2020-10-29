@@ -6,13 +6,13 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:49:39 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 17:49:44 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/29 16:25:04 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char **create_array(char const *s, char c, int* len)
+int count(char const *s, char c, int* len)
 {
     int i;
 
@@ -25,7 +25,7 @@ char **create_array(char const *s, char c, int* len)
         i++;
     }
     (*len)++;
-    return (char**)malloc(((*len) + 1) * sizeof(char*));
+    return *len;
 }
 
 char **ft_split(char const *s, char c)
@@ -39,9 +39,11 @@ char **ft_split(char const *s, char c)
     if(!s[0] && !s[1])
     {
         if (s[0] == c)
-            return (NULL);       
+            return (NULL);
     }
-    result = create_array(s, c, &len);
+	count(s, c, &len);
+	printf("%d\n", len);
+    result = (char**)malloc((len + 1) * sizeof(char*));
     j = 0;
     end = 0;
     while (j != len)

@@ -111,6 +111,7 @@ int main()
     //mem_test();
     //memchr_test();
     //strdup_test();
-	putnbr_test();
+	//putnbr_test();
+	ft_split3("", ' ');
     return 0;
 }

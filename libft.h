@@ -38,7 +38,8 @@ int		ft_toupper(int c);
 //additional funcs
 
 char **ft_split(char const *s, char c);
-char **ft_split_copy(char const *s, char c);
+char **ft_split2(char const *s, char c);
+char **ft_split3(char const *s, char c);
 char *ft_itoa(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char *ft_strjoin(char const *s1, char const *s2);

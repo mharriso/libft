@@ -17,7 +17,7 @@ char *create_word(char const *s, char c, int* end)
         int start;
         int i;
         char *word;
-        
+
         i = *end;
         while (s[i] == c)
             i++;
@@ -30,20 +30,20 @@ char *create_word(char const *s, char c, int* end)
         while (start != ((*end) + 1))
             word[i++] = s[start++];
         word[i] = '\0';
-        (*end)++; 
-        return word;   
+        (*end)++;
+        return word;
 }
-char **ft_split_copy(char const *s, char c)
+char **ft_split2(char const *s, char c)
 {
     int j;
     int end;
     int len;
     char **result, *s1 = NULL;
-    
+
     if (s)
         s1 = ft_strtrim(s, &c);
     if(!s1)
-        return (NULL);  
+        return (NULL);
     result = create_array_c(s1, c, &len);
     j = 0;
     end = 0;
