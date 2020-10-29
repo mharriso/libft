@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:08:34 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/29 18:12:26 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/29 18:58:51 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,8 @@ char	**ft_split3(char const *s, char c)
 {
 	char	**res;
 	int		len;
+	int		i;
+	int		word_len;
 
 	if (!s)
 		return (NULL);
@@ -40,5 +42,9 @@ char	**ft_split3(char const *s, char c)
 	printf("%d\n", count_words(s, c));
 	if (!(res = (char**)malloc(len + 1 * sizeof(char*))))
 		return (NULL);
+	while (s[i])
+	{
+
+	}
 	return (NULL);
 }
