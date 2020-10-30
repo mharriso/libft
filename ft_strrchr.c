@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:38:00 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 23:31:53 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/30 17:44:18 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,5 @@ char	*ft_strrchr(const char *str, int c)
 	while (len--)
 		if (str[len] == c)
 			return ((char *)str + len);
-	return (0);
+	return (NULL);
 }

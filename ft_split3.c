@@ -6,15 +6,15 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:08:34 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/29 18:58:51 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/30 15:40:19 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_words(char const *s, char c)
+size_t		count_words(char const *s, char c)
 {
-	int	count;
+	size_t	count;
 	int	i;
 
 	i = 0;
@@ -29,22 +29,27 @@ int		count_words(char const *s, char c)
 	return (count);
 }
 
+int	count_word_len(char const *s, char c)
+{
+	return 0;
+}
+
 char	**ft_split3(char const *s, char c)
 {
 	char	**res;
-	int		len;
+	size_t	len;
 	int		i;
 	int		word_len;
 
 	if (!s)
 		return (NULL);
 	len = count_words(s, c);
-	printf("%d\n", count_words(s, c));
+	printf("%zu\n", count_words(s, c));
 	if (!(res = (char**)malloc(len + 1 * sizeof(char*))))
 		return (NULL);
-	while (s[i])
+	/*while (s[i])
 	{
-
-	}
+		while(s[i])
+	}*/
 	return (NULL);
 }

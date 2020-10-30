@@ -1,6 +1,6 @@
 #include "libft.h"
 
-void atoi_test()
+void ft_atoi_test()
 {
     printf("%21d | %21d\n", atoi("6442450944"), ft_atoi("6442450944"));
 
@@ -25,7 +25,7 @@ void strlcpy_test()
 {
    char  buf1[10] = "21";
    char  buf2[10] = "21";
-   const char *str = "sssssssssss";
+   const char *str = "ssssssssssssssssssssssssssss";
    size_t sz1, sz2;
 
    printf("строка: \"%s\"\n\n", str);
@@ -39,7 +39,7 @@ void strlcpy_test()
 
 
    printf("буфер перед копированием: \"%s\"\n", buf2);
-   sz2 = strlcpy(buf2, str, 10);
+   sz2 = ft_strlcat(buf2, str, 20);
    if (sz2 >= sizeof(buf2))
       printf("обнаружено усечение строки с %zu до %lu символов!\n", sz2, sizeof(buf2)-1);
    printf("буфер после копирования:  \"%s\"\nsize = %zu\n", buf2, sz2);
@@ -99,12 +99,26 @@ void putnbr_test()
 	write(1, "\n", 1);
 	ft_putnbr_fd(-586555, 1);
 	write(1, "\n", 1);
+	ft_putnbr_fd(0, 1);
+	write(1, "\n", 1);
+
+}
+void atoi_test()
+{
+  printf("INT_MAX = %d\n", atoi("2147483647"));//INT_MAX
+  printf("INT_MIN = %d\n\n", atoi("-2147483648"));//INT_MIN
+
+  printf("%d\n", atoi("2147483648"));//INT_MAX + 1
+  printf("%d\n", atoi("4294967296"));//INT_MAX x 2 + 2
+  printf("%d\n", atoi("6442450943"));//INT_MAX x 3 + 2
+  printf("%d\n", atoi("107374182400"));//INT_MAX x 42 + 42
 
 }
 
 int main()
 {
-    //atoi_test();
+    //ft_atoi_test();
+	atoi_test();
     //strlcpy_test();
     //strdup_test();
     //cmp_test();
@@ -112,6 +126,6 @@ int main()
     //memchr_test();
     //strdup_test();
 	//putnbr_test();
-	ft_split("", ' ');
+	//ft_split("", ' ');
     return 0;
 }
