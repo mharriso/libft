@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 15:47:50 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/29 13:59:00 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/10/31 00:06:44 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memchr(const void *arr, int c, size_t n)
 	while (i < n)
 	{
 		if (((unsigned char *)arr)[i] == c)
-			return ((void *)arr) + i;
+			return (arr + i);
 		i++;
 	}
 	return (NULL);
