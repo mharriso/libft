@@ -1,37 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*    ft_putendl_fd.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 14:17:59 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/30 22:15:43 by mharriso         ###   ########.fr       */
+/*   Created: 2020/10/30 21:42:56 by mharriso          #+#    #+#             */
+/*   Updated: 2020/10/30 21:42:58 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+void ft_putendl_fd(char *s, int fd)
 {
-	int		number;
-	int		sign;
-
-	sign = 1;
-	while (ft_isspace(*str))
-		str++;
-	if (*str == '-')
-	{
-		sign = -1;
-		str++;
-	}
-	if (*str == '+')
-		str++;
-	number = 0;
-	while (ft_isdigit(*str))
-	{
-		number = number * 10 + *str - '0';
-		str++;
-	}
-	return (sign * number);
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
