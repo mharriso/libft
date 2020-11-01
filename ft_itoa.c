@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 22:15:29 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/31 00:05:14 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/01 02:32:43 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,9 @@ char			*ft_itoa(int n)
 		return (ft_strdup("-2147483648"));
 	if (n == 0)
 		return (ft_strdup("0"));
-	minus = 0;
-	if (n < 0)
-	{
+	minus = n < 0;
+	if (minus)
 		n *= -1;
-		minus = 1;
-	}
 	len = digits(n) + minus;
 	if (!(str = malloc((len + 1) * sizeof(char))))
 		return (NULL);

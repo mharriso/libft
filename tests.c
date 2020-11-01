@@ -118,7 +118,7 @@ void atoi_test()
 int main()
 {
     //ft_atoi_test();
-	atoi_test();
+	//atoi_test();
     //strlcpy_test();
     //strdup_test();
     //cmp_test();
@@ -127,5 +127,6 @@ int main()
     //strdup_test();
 	//putnbr_test();
 	//ft_split("", ' ');
+	printf("%d\n", ft_atoi("-+48"));
     return 0;
 }

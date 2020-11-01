@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 15:47:14 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 22:40:42 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/01 03:04:34 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	ft_lstsize(t_list *lst)
 		lst = lst->next;
 		i++;
 	}
-	return i;
+	return (i);
 }

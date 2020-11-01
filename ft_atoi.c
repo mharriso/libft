@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:17:59 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/30 22:15:43 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/01 03:23:50 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_atoi(char *str)
 {
-	int		number;
-	int		sign;
+	long		number;
+	int			sign;
 
 	sign = 1;
 	while (ft_isspace(*str))
@@ -25,11 +25,15 @@ int	ft_atoi(char *str)
 		sign = -1;
 		str++;
 	}
-	if (*str == '+')
+	else if (*str == '+')
 		str++;
 	number = 0;
 	while (ft_isdigit(*str))
 	{
+		if (number > INT_MAX && sign == 1)
+			return (-1);
+		if (number > (long)INT_MAX + 1 && sign == -1)
+			return (0);
 		number = number * 10 + *str - '0';
 		str++;
 	}

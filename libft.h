@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/11/01 01:34:10 by mharriso          #+#    #+#             */
+/*   Updated: 2020/11/01 01:34:13 by mharriso         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <limits.h>
@@ -43,7 +55,7 @@ char **ft_split(char const *s, char c);
 char *ft_itoa(int n);
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char *ft_strjoin(char const *s1, char const *s2);
-char *ft_strtrim(char const *s1, char const *set);
+char *ft_strtrim(char const *s, char const *set);
 char *ft_substr(char const *s, unsigned int start, size_t len);
 void ft_putstr_fd(char *s, int fd);
 void ft_putchar_fd(char c, int fd);
