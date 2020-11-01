@@ -127,6 +127,7 @@ int main()
     //strdup_test();
 	//putnbr_test();
 	//ft_split("", ' ');
-	printf("%d\n", ft_atoi("-+48"));
+	//printf("%d\n", ft_atoi("-+48"));
+   printf("%s\n", ft_strtrim("1234543215", "12345"));
     return 0;
 }
