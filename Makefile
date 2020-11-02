@@ -24,7 +24,6 @@ FILES		= ft_strlen.c \
 				ft_isalnum.c \
 				ft_tolower.c \
 				ft_toupper.c \
-				ft_split.c \
 				ft_itoa.c \
 				ft_strmapi.c \
 				ft_strjoin.c \

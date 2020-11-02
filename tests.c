@@ -114,7 +114,16 @@ void atoi_test()
   printf("%d\n", atoi("107374182400"));//INT_MAX x 42 + 42
 
 }
-
+void split_test()
+{
+	char **res = ft_split("1 2 3 4 ", ' ');
+    int i = 0;
+    while(i < 4)
+    {
+        printf("%s\n", res[i]);
+        i++;
+    }
+}
 int main()
 {
     //ft_atoi_test();
@@ -128,12 +137,9 @@ int main()
 	//putnbr_test();
 	//ft_split("", ' ');
    //printf("%s\n", ft_strtrim("1234543215", "12345"));
-   
-   char *s1 = "MZIRIBMZIRIBMZE123";
-	char *s2 = "MZIRIBMZE";
-	size_t max = strlen(s2);
-	char *i1 = strnstr(s1, s2, max);
-	char *i2 = ft_strnstr(s1, s2, max);
-   printf("%s\n%s\n", i1, i2);
+
+	char *s = "1.2.3.4.5";
+    char *sep = ft_strchr(s, '.');
+	printf("%ld\n", sep - s);
     return 0;
 }

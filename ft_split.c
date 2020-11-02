@@ -5,66 +5,63 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/28 17:49:39 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/29 16:25:04 by mharriso         ###   ########.fr       */
+/*   Created: 2020/10/29 16:08:34 by mharriso          #+#    #+#             */
+/*   Updated: 2020/11/02 21:53:10 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int count(char const *s, char c, int* len)
+size_t		count_words(char const *s, char c)
 {
-    int i;
+	size_t	count;
+	int	i;
 
-    i = 1;
-    *len = 0;
-    while (s[i])
-    {
-        if (s[i] == c && s[i - 1] != c)
-            (*len)++;
-        i++;
-    }
-    (*len)++;
-    return *len;
+	i = 0;
+	count = 0;
+	while (s[i] && s[i + 1])
+	{
+		if (s[i] != c && s[i + 1] == c)
+			count++;
+		i++;
+	}
+	count += (s[i] != c && s[0]) ? 1 : 0;
+	return (count);
 }
 
-char **ft_split(char const *s, char c)
+int	word_len(char const *s, char c)
 {
-    int i, j;
-    int start;
-    int end;
-    int len;
-    char **result;
+	int i;
 
-    if(!s[0] && !s[1])
-    {
-        if (s[0] == c)
-            return (NULL);
-    }
-	count(s, c, &len);
-	printf("%d\n", len);
-    result = (char**)malloc((len + 1) * sizeof(char*));
-    j = 0;
-    end = 0;
-    while (j != len)
-    {
-        i = end;
-        while (s[i] == c)
-            i++;
-        start = i;
-        while (s[i] != c)
-            i++;
-        end = i - 1;
-        result[j] = (char*)malloc(end - start + 2);
-        i = 0;
-        while (start != (end + 1))
-        {
-            result[j][i++] = s[start++];
-        }
-        result[j][i] = '\0';
-        j++;
-        end++;
-    }
-    result[j] = NULL;
-    return (result);
+	i = 0;
+	while(*s)
+	return (0);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**res;
+	size_t	len;
+	size_t	word_len;
+	int		i;
+
+
+	if (!s)
+		return (NULL);
+	len = count_words(s, c);
+	printf("%zu\n", count_words(s, c));
+	if (!(res = (char**)malloc(len + 1 * sizeof(char*))))
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		word_len = 0;
+		while (*s++ != c)
+			word_len++;
+
+		if (!(res[i++] = create_word(s, c)))
+			return NULL;
+		s++;
+	}
+	return (res);
 }
