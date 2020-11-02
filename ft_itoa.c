@@ -35,7 +35,7 @@ char			*ft_itoa(int n)
 	minus = n < 0;
 	if (minus)
 		n *= -1;
-	len = digits(n) + minus;
+	len = minus + digits(n);
 	if (!(str = malloc((len + 1) * sizeof(char))))
 		return (NULL);
 	if (minus)
