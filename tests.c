@@ -127,7 +127,13 @@ int main()
     //strdup_test();
 	//putnbr_test();
 	//ft_split("", ' ');
-	//printf("%d\n", ft_atoi("-+48"));
-   printf("%s\n", ft_strtrim("1234543215", "12345"));
+   //printf("%s\n", ft_strtrim("1234543215", "12345"));
+   
+   char *s1 = "MZIRIBMZIRIBMZE123";
+	char *s2 = "MZIRIBMZE";
+	size_t max = strlen(s2);
+	char *i1 = strnstr(s1, s2, max);
+	char *i2 = ft_strnstr(s1, s2, max);
+   printf("%s\n%s\n", i1, i2);
     return 0;
 }
