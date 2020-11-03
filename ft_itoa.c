@@ -6,13 +6,13 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 22:15:29 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/01 02:32:43 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/02 23:23:04 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int				digits(int n)
+static	int		digits(int n)
 {
 	int		i;
 

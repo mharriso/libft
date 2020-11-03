@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/01 01:34:10 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/01 01:34:13 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/02 23:31:44 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,16 @@
 # include <limits.h>
 # include <stdlib.h>
 # include <unistd.h>
-//delete
+/*
+*delete
+*/
 #include <stdint.h>
 #include <stdio.h>
 #include <string.h>
 
-//libc funcs
+/*
+********************************FIRST PART********************************* *
+*/
 
 size_t	ft_strlen(const char *s);
 void *ft_calloc( size_t number, size_t size );
@@ -47,8 +51,9 @@ int		ft_isalnum(int c);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 
-//additional funcs
-
+/*
+********************************SECOND PART******************************** *
+*/
 char **ft_split(char const *s, char c);
 //char **ft_split2(char const *s, char c);
 //char **ft_split3(char const *s, char c);
@@ -62,7 +67,9 @@ void ft_putchar_fd(char c, int fd);
 void ft_putendl_fd(char *s, int fd);
 void ft_putnbr_fd(int n, int fd);
 
-//bonus funcs
+/*
+********************************BONUS PART********************************* *
+*/
 
 typedef struct		s_list
 {

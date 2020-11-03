@@ -6,13 +6,13 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/29 16:08:34 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/02 21:53:10 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/03 00:08:54 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		count_words(char const *s, char c)
+static	size_t		count_words(char const *s, char c)
 {
 	size_t	count;
 	int	i;
@@ -60,7 +60,7 @@ char	**ft_split(char const *s, char c)
 			word_len++;
 
 		if (!(res[i++] = create_word(s, c)))
-			return NULL;
+			return NULL; //need clear
 		s++;
 	}
 	return (res);
