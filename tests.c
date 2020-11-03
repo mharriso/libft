@@ -116,11 +116,11 @@ void atoi_test()
 }
 void split_test()
 {
-	char **res = ft_split("1 2 3 4 ", ' ');
+	char **res = ft_split("", ' ');
     int i = 0;
-    while(i < 4)
+    while(i < 1)
     {
-        printf("%s\n", res[i]);
+        printf("%s$\n", res[i]);
         i++;
     }
 }
@@ -136,10 +136,8 @@ int main()
     //strdup_test();
 	//putnbr_test();
 	//ft_split("", ' ');
-   //printf("%s\n", ft_strtrim("1234543215", "12345"));
-
-	char *s = "1.2.3.4.5";
-    char *sep = ft_strchr(s, '.');
-	printf("%ld\n", sep - s);
-    return 0;
+    //printf("%s\n", ft_strtrim("1234543215", "12345"));
+   	printf("\n");
+	split_test();
+	return 0;
 }

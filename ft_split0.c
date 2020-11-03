@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:49:39 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/02 19:49:21 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/03 16:36:23 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ char **ft_split0(char const *s, char c)
     end = 0;
     while (j != len)
     {
+		
         i = end;
         while (s[i] == c)
             i++;
