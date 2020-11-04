@@ -6,11 +6,16 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 14:17:59 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/01 03:23:50 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/05 02:09:34 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int	ft_isspace(int c)
+{
+	return (c == ' ' || (c >= '\t' && c <= '\r'));
+}
 
 int	ft_atoi(char *str)
 {
