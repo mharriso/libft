@@ -58,7 +58,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (j < len + (!len))
+	while (j < len)
 	{
 		word_len = 0;
 		while (s[i] == c)
