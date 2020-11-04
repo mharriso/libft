@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:49:39 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/04 04:45:27 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/04 19:20:47 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,19 @@ static	size_t	count_words(char const *s, char c)
 	return (count);
 }
 
+static	size_t	get_word_len(const char *s, char c)
+{
+	char		*len;
+
+	len = ft_strchr(s, c);
+	if (len != NULL)
+		return (len - s);
+	return (ft_strlen(s));
+}
+
 static	char	**free_words(char **array)
 {
-	size_t	i;
+	size_t		i;
 
 	i = 0;
 	while (array[i])
@@ -43,7 +53,7 @@ static	char	**free_words(char **array)
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char		**res;
 	size_t		len;
@@ -57,21 +67,16 @@ char	**ft_split(char const *s, char c)
 	if (!(res = (char**)malloc((len + 1) * sizeof(char*))))
 		return (NULL);
 	i = 0;
-	j = 0;
-	while (j < len)
+	j = -1;
+	while (++j < len)
 	{
-		word_len = 0;
 		while (s[i] == c)
 			i++;
-		while (s[i] != c && s[i])
-		{
-			word_len++;
-			i++;
-		}
+		word_len = get_word_len(s + i, c);
 		if (!(res[j] = calloc((word_len + 1), sizeof(char))))
 			return (free_words(res));
-		res[j] = ft_memcpy(res[j], s + (i - word_len), word_len);
-		j++;
+		res[j] = ft_memcpy(res[j], s + i, word_len);
+		i += word_len;
 	}
 	res[j] = NULL;
 	return (res);

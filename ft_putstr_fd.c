@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 16:01:13 by mharriso          #+#    #+#             */
-/*   Updated: 2020/10/28 22:54:18 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/04 20:29:09 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s || fd < 0)
+		return ;
 	write(fd, s, ft_strlen(s));
 }
