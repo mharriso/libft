@@ -33,14 +33,20 @@ FILES		= ft_strlen.c \
 				ft_putstr_fd.c \
 				ft_putchar_fd.c \
 				ft_putnbr_fd.c \
-				ft_putendl_fd.c \
-				ft_lstnew.c \
-				ft_lstadd_front.c \
-				ft_lstsize.c \
-				ft_lstlast.c \
-				ft_lstadd_back.c \
-				ft_isspace.c
+				ft_putendl_fd.c
 OBJ			= $(FILES:.c=.o)
+
+BONUS_FILES = ft_lstadd_back.c \
+				ft_lstadd_front.c \
+				ft_lstlast.c \
+				ft_lstnew.c \
+				ft_lstsize.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstmap.c \
+				ft_lstiter.c
+
+OBJ_BONUS = $(BONUS_FILES:.c=.o)
 
 all: $(NAME)
 
@@ -50,8 +56,11 @@ $(OBJ): $(FILES)
 $(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 
+bonus: $(OBJ) $(OBJ_BONUS)
+	ar rc $(NAME) $(OBJ_BONUS) $(OBJ)
+
 clean:
-	rm -f $(OBJ)
+	rm -f $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	rm -f $(NAME)

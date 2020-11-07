@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 18:38:13 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/05 00:01:17 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/06 20:18:14 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strtrim(char const *s, char const *set)
 	size_t		end;
 
 	if (!s || !set)
-		return (NULL);
+		return (0);
 	start = 0;
 	end = ft_strlen(s);
 	while (ft_strchr(set, s[start]) && s[start])
