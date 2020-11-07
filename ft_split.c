@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/28 17:49:39 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/04 19:20:47 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/08 01:17:40 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char			**ft_split(char const *s, char c)
 		while (s[i] == c)
 			i++;
 		word_len = get_word_len(s + i, c);
-		if (!(res[j] = calloc((word_len + 1), sizeof(char))))
+		if (!(res[j] = ft_calloc((word_len + 1), sizeof(char))))
 			return (free_words(res));
 		res[j] = ft_memcpy(res[j], s + i, word_len);
 		i += word_len;
