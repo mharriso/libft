@@ -6,7 +6,7 @@
 /*   By: mharriso <mharriso@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/07 03:03:23 by mharriso          #+#    #+#             */
-/*   Updated: 2020/11/07 04:47:15 by mharriso         ###   ########.fr       */
+/*   Updated: 2020/11/07 04:56:29 by mharriso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list *new;
 	t_list *res;
 
-	if (!lst && f)
+	if (!lst && f && del)
 		return (NULL);
 	res = NULL;
 	while (lst && f)
